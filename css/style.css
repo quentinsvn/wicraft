@@ -1,0 +1,455 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #EFEFEF;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: rgb(33, 34, 38);
+    color: #fff;
+    transition: all 0.3s;
+    overflow: scroll;
+}
+
+#sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    text-align: center;
+    padding: 30px 0 30px;
+}
+
+#sidebar .sidebar-header img {
+    width: 130px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li {
+    margin: 20px;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+#sidebar ul li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    display: block;
+    background: transparent;
+    border-color: transparent;
+}
+
+#sidebar ul li a span {
+    padding-left: 30px;
+    font-weight: 100;
+}
+
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #393c43;
+    border-radius: 10px;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #393c43;
+    border-radius: 10px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+.icones_ul {
+    list-style: none;
+    padding: 0;
+}
+
+.icones_ul > li > img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+
+.icones_ul li {
+    display: inline;
+}
+
+.icones_nav {
+    float: right;
+}
+
+.icones_profile_ul {
+    list-style: none;
+    padding: 0;
+}
+
+.icones_profile_ul li {
+    display: inline;
+}
+
+.img_profile {
+    font-size: 35px;
+}
+
+.pp img {
+    width: 35px;
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+.banner {
+    color: white;
+    position: relative;
+}
+
+.banner figure {
+    height: 200px;
+    overflow:hidden; /*hide bounds of image */
+    margin:0;   /*reset margin of figure tag*/
+}
+
+.banner figure img {
+    display:block; /*remove inline-block spaces*/
+   width:100%; /*make image streatch*/
+   filter: brightness(50%);
+   -webkit-filter: brightness(50%);
+}
+
+.banner h1 {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+}
+
+.card_post {
+    margin-bottom: 20px;
+}
+
+.card_post_title {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: brown;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card_post_author {
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #f3f3f3;
+}
+
+.card_post_author img {
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.card_post_title a {
+    font-size: 1.2rem;
+}
+
+.card_post_content {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    padding: 20px;
+    background-color: white;
+}
+
+
+.card_post_text {
+    text-align: justify;
+    line-height: 1.5;
+    color: rgb(97, 97, 97);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.card_post_read {
+    background-color:#f5f5f5;
+    height: 60px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-picture {
+    width: 35px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.content {
+    padding: 0 0 0 .5em;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Caret Breadcrumb */
+.breadcrumb-caret .breadcrumb-item+.breadcrumb-item::before {
+    content: '\f0da';
+    font-family: 'FontAwesome';
+  }
+  
+  /* Bullet */
+  .breadcrumb-bullet .breadcrumb-item+.breadcrumb-item::before {
+    content: '•';
+  }
+  
+  /* Arrow Breadcrumb */
+  .breadcrumb-arrow .breadcrumb-item+.breadcrumb-item::before {
+    content: '';
+  }
+  
+  .breadcrumb-arrow {
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item:first-child a {
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item,
+  .breadcrumb-arrow .breadcrumb-item a,
+  .breadcrumb-arrow .breadcrumb-item span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item:not(:first-child) {
+    margin-left: -1px;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item+.breadcrumb-item:before {
+    padding: 0;
+    content: "";
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a,
+  .breadcrumb-arrow .breadcrumb-item.active {
+    height: 40px;
+    padding: 0 10px 0 25px;
+    line-height: 40px;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    background-color: brown;
+    border: 1px solid brown;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a:after,
+  .breadcrumb-arrow .breadcrumb-item a:before {
+    position: absolute;
+    top: -1px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a:before {
+    right: -10px;
+    z-index: 3;
+    border-left-color: brown;
+    border-left-style: solid;
+    border-left-width: 11px;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a:after {
+    right: -11px;
+    z-index: 2;
+    border-left: 11px solid #731d1d;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a:focus,
+  .breadcrumb-arrow li a:hover {
+    background-color: #ae3f3f;
+    border: 1px solid #ae3f3f;
+  }
+  
+  .breadcrumb-arrow .breadcrumb-item a:focus:before,
+  .breadcrumb-arrow li a:hover:before {
+    border-left-color: #ae3f3f;
+  }
+  
+  .breadcrumb-arrow li.active:after,
+  .breadcrumb-arrow li.active:before {
+    border-left-color: #ae3f3f;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.15em;
+  }
+
+.card-header {
+      background-color: brown !important;
+      color: white;
+      border-color: brown;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
